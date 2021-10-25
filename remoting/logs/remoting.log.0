@@ -1,0 +1,27 @@
+Oct 25, 2021 11:26:30 AM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: slave1
+Oct 25, 2021 11:26:30 AM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Oct 25, 2021 11:26:30 AM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.7
+Oct 25, 2021 11:26:30 AM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /home/ec2-user/jenkins/remoting as a remoting work directory
+Oct 25, 2021 11:26:31 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://65.2.126.132:8080/]
+Oct 25, 2021 11:26:31 AM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+Oct 25, 2021 11:26:31 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Agent discovery successful
+  Agent address: 65.2.126.132
+  Agent port:    37159
+  Identity:      13:9d:8b:61:a8:dd:a2:55:3c:5c:c3:70:a8:8f:cc:c9
+Oct 25, 2021 11:26:31 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Handshaking
+Oct 25, 2021 11:26:31 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to 65.2.126.132:37159
+Oct 25, 2021 11:26:31 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Trying protocol: JNLP4-connect
+Oct 25, 2021 11:26:31 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Remote identity confirmed: 13:9d:8b:61:a8:dd:a2:55:3c:5c:c3:70:a8:8f:cc:c9
+Oct 25, 2021 11:26:33 AM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connected

@@ -1,0 +1,57 @@
+Oct 25, 2021 12:22:13 PM hudson.remoting.jnlp.Main createEngine
+INFO: Setting up agent: slave1
+Oct 25, 2021 12:22:13 PM hudson.remoting.jnlp.Main$CuiListener <init>
+INFO: Jenkins agent is running in headless mode.
+Oct 25, 2021 12:22:13 PM hudson.remoting.Engine startEngine
+INFO: Using Remoting version: 4.7
+Oct 25, 2021 12:22:13 PM org.jenkinsci.remoting.engine.WorkDirManager initializeWorkDir
+INFO: Using /home/ec2-user/jenkins/remoting as a remoting work directory
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Locating server among [http://65.2.126.132:8080/]
+Oct 25, 2021 12:22:14 PM org.jenkinsci.remoting.engine.JnlpAgentEndpointResolver resolve
+INFO: Remoting server accepts the following protocols: [JNLP4-connect, Ping]
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Agent discovery successful
+  Agent address: 65.2.126.132
+  Agent port:    37159
+  Identity:      13:9d:8b:61:a8:dd:a2:55:3c:5c:c3:70:a8:8f:cc:c9
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Handshaking
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Connecting to 65.2.126.132:37159
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Trying protocol: JNLP4-connect
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Remote identity confirmed: 13:9d:8b:61:a8:dd:a2:55:3c:5c:c3:70:a8:8f:cc:c9
+Oct 25, 2021 12:22:14 PM org.jenkinsci.remoting.protocol.impl.ConnectionHeadersFilterLayer onRecv
+INFO: [JNLP4-connect connection to 65.2.126.132/65.2.126.132:37159] Local headers refused by remote: slave1 is already connected to this controller. Rejecting this connection.
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener status
+INFO: Protocol JNLP4-connect encountered an unexpected exception
+java.util.concurrent.ExecutionException: org.jenkinsci.remoting.protocol.impl.ConnectionRefusalException: slave1 is already connected to this controller. Rejecting this connection.
+	at org.jenkinsci.remoting.util.SettableFuture.get(SettableFuture.java:223)
+	at hudson.remoting.Engine.innerRun(Engine.java:739)
+	at hudson.remoting.Engine.run(Engine.java:514)
+Caused by: org.jenkinsci.remoting.protocol.impl.ConnectionRefusalException: slave1 is already connected to this controller. Rejecting this connection.
+	at org.jenkinsci.remoting.protocol.impl.ConnectionHeadersFilterLayer.newAbortCause(ConnectionHeadersFilterLayer.java:377)
+	at org.jenkinsci.remoting.protocol.impl.ConnectionHeadersFilterLayer.onRecvClosed(ConnectionHeadersFilterLayer.java:432)
+	at org.jenkinsci.remoting.protocol.ProtocolStack$Ptr.onRecvClosed(ProtocolStack.java:817)
+	at org.jenkinsci.remoting.protocol.FilterLayer.onRecvClosed(FilterLayer.java:288)
+	at org.jenkinsci.remoting.protocol.impl.SSLEngineFilterLayer.onRecvClosed(SSLEngineFilterLayer.java:170)
+	at org.jenkinsci.remoting.protocol.ProtocolStack$Ptr.onRecvClosed(ProtocolStack.java:817)
+	at org.jenkinsci.remoting.protocol.NetworkLayer.onRecvClosed(NetworkLayer.java:154)
+	at org.jenkinsci.remoting.protocol.impl.BIONetworkLayer.access$1500(BIONetworkLayer.java:48)
+	at org.jenkinsci.remoting.protocol.impl.BIONetworkLayer$Reader.run(BIONetworkLayer.java:247)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at hudson.remoting.Engine$1.lambda$newThread$0(Engine.java:119)
+	at java.lang.Thread.run(Thread.java:748)
+	Suppressed: java.nio.channels.ClosedChannelException
+		... 7 more
+
+Oct 25, 2021 12:22:14 PM hudson.remoting.jnlp.Main$CuiListener error
+SEVERE: The server rejected the connection: None of the protocols were accepted
+java.lang.Exception: The server rejected the connection: None of the protocols were accepted
+	at hudson.remoting.Engine.onConnectionRejected(Engine.java:824)
+	at hudson.remoting.Engine.innerRun(Engine.java:764)
+	at hudson.remoting.Engine.run(Engine.java:514)
+
